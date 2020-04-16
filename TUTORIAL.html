@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+
+        <title>Tutorial</title>
+    </head>
+    <body>
+        <div class="container">
+            <div style="padding-top: 5%;">
+                <div class="card" id="pilih" style="width: 45rem; margin-left: auto; margin-right: auto;">
+                    <div class="card-body">
+                      <h5 class="card-title">Tutorial</h5>
+                      <p class="card-text">Facebook Unfriend Inactive (Last Status Update)</p>
+                      <p>
+                        1. Get token <a href="http://tiny.cc/kx04mz" target="_blank"><b>DISINI</b></a><br>
+                        2. Buka CMD/Terminal, run <b>php unfriend.php</b>. Input token & tahun<br>
+                        3. Jika proses pada CMD/Terminal selesai maka hasil akan disimpan pada <b>inactive_id.txt</b><br>
+                        4. Upload file <b>inactive_id.txt</b> dibawah<br>
+                        5. Lalu hasilnya jalankan pada Console di Facebook<br>
+                      </p>
+
+                      <input type='file' id="idUpl" accept='text/plain' onchange='openFile(event)'><br>
+                      <textarea id='output' class="form-control"></textarea>
+                      <p id="ins">Input script diatas pada console facebook.</p>
+                    </div>
+                </div>
+            </div>
+            <p style="width: 18rem; margin-left: auto; margin-right: auto; font-size: 80%;" class="text-center text-muted">Developed with <span style="color: red;">love</span> by <a target="_blank" href="https://fb.me/dndyrka">Dandy</a></p>
+        </div>
+        <script>
+            if(document.getElementById("idUpl").files.length == 0 ){
+                document.getElementById('output').style.display = "none";
+                document.getElementById('ins').style.display = "none";
+            }
+            var openFile = function(event) {
+                document.getElementById('output').style.display = "block";
+                document.getElementById('ins').style.display = "block";
+                var input = event.target;
+                var reader = new FileReader();
+                reader.onload = function(){
+                    var text = reader.result;
+                    var js = 'var list = "'+text+'";';
+                    js += atob("dmFyIG9iaiA9IGxpc3Quc3BsaXQoInwiKTsKb2JqLmZvckVhY2goZnVuY3Rpb24oaWQsIGluZGV4KSB7Cgl2YXIgYSA9IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoJ3NjcmlwdCcpOwoJYS5pbm5lckhUTUwgPSAibmV3IEFzeW5jUmVxdWVzdCgpLnNldFVSSSgnL2FqYXgvcHJvZmlsZS9yZW1vdmVmcmllbmRjb25maXJtLnBocCcpLnNldERhdGEoeyB1aWQ6ICIgKyBpZCArICIsbm9yZWZyZXNoOnRydWUgfSkuc2VuZCgpOyI7CmRvY3VtZW50LmJvZHkuYXBwZW5kQ2hpbGQoYSk7CiAgICBjb25zb2xlLmxvZyhpZCk7Cn0pOw==");
+                    var node = document.getElementById('output');
+                    node.innerText = js;
+                    console.log(reader.result.substring(0, 200));
+                };
+                reader.readAsText(input.files[0]);
+            };
+        </script>
+    </body>
+</html>
