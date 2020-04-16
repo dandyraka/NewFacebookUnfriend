@@ -45,8 +45,8 @@
                 var reader = new FileReader();
                 reader.onload = function(){
                     var text = reader.result;
-                    var js = 'var list = "'+text+'";';
-                    js += atob("dmFyIG9iaiA9IGxpc3Quc3BsaXQoInwiKTsKb2JqLmZvckVhY2goZnVuY3Rpb24oaWQsIGluZGV4KSB7Cgl2YXIgYSA9IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoJ3NjcmlwdCcpOwoJYS5pbm5lckhUTUwgPSAibmV3IEFzeW5jUmVxdWVzdCgpLnNldFVSSSgnL2FqYXgvcHJvZmlsZS9yZW1vdmVmcmllbmRjb25maXJtLnBocCcpLnNldERhdGEoeyB1aWQ6ICIgKyBpZCArICIsbm9yZWZyZXNoOnRydWUgfSkuc2VuZCgpOyI7CmRvY3VtZW50LmJvZHkuYXBwZW5kQ2hpbGQoYSk7CiAgICBjb25zb2xlLmxvZyhpZCk7Cn0pOw==");
+                    var js = atob("ZnVuY3Rpb24gc2xlZXAoZSl7cmV0dXJuIG5ldyBQcm9taXNlKG49PnNldFRpbWVvdXQobixlKSl9YXN5bmMgZnVuY3Rpb24gbmd1bnByZW4oZSl7Y29uc29sZS5sb2coIkZhY2Vib29rIFVuZnJpZW5kIGJ5IERhbmR5IiksYXdhaXQgc2xlZXAoNWUzKTt2YXIgbj1lLnNwbGl0KCJ8Iiksbz0wO2ZvcihsZXQgZT0wO2U8bi5sZW5ndGg7ZSsrKWlmKDM9PT1vKWF3YWl0IHNsZWVwKDVlMyksY29uc29sZS5sb2coIj09IEJlcmhlbnRpIFNlamVuYWsgPT0iKSxvPTA7ZWxzZXt2YXIgdD1uW2VdLHI9ZG9jdW1lbnQuY3JlYXRlRWxlbWVudCgic2NyaXB0Iik7ci5pbm5lckhUTUw9Im5ldyBBc3luY1JlcXVlc3QoKS5zZXRVUkkoJy9hamF4L3Byb2ZpbGUvcmVtb3ZlZnJpZW5kY29uZmlybS5waHAnKS5zZXREYXRhKHsgdWlkOiAiK3QrIixub3JlZnJlc2g6dHJ1ZSB9KS5zZW5kKCk7Iixkb2N1bWVudC5ib2R5LmFwcGVuZENoaWxkKHIpLGNvbnNvbGUubG9nKHQrIiBbVU5GUklFTkRFRF0iKSxvKyt9fQ==");
+                    js += 'ngunpren("'+text+'");';
                     var node = document.getElementById('output');
                     node.innerText = js;
                     console.log(reader.result.substring(0, 200));
