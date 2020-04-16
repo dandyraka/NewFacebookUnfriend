@@ -1,14 +1,19 @@
 # FacebookUnfriend
 Unfriend inactive users
 
-© JANTER https://pastebin.com/kbsCFyAs
+New method of [My old repo](https://github.com/dandyraka/FacebookUnfriend)
 
-Recode by Dandy
+## NEW Method
+Open **TUTORIAL.html** for more detail
+
+- Get token :
+    - [Here](http://tiny.cc/kx04mz) or
+    - [Here](http://tiny.cc/ob74mz)
 
 ## Install
       $ pkg install php
-      $ git clone https://github.com/dandyraka/FacebookUnfriend.git
-      $ cd FacebookUnfriend
+      $ git clone https://github.com/dandyraka/NewFacebookUnfriend.git
+      $ cd NewFacebookUnfriend
 
 ## Run
       $ php unfriend.php
